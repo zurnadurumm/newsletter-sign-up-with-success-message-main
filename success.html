@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="subscription">
+      <img src="assets/images/icon-success.svg" alt="Succeess" />
+      <h1>Thanks for subscribing!</h1>
+      <p class="confirm-text">
+        A confirmation email has been sent to
+        <span class="target-email"></span>. Please open it and click the button
+        inside to confirm your subscription.
+      </p>
+      <button>Dismiss message</button>
+    </div>
+
+    <script>
+      let email = localStorage.getItem("email");
+
+      // Display the email in the target span
+      let targetEmail = document.querySelector(".target-email");
+      targetEmail.textContent = email;
+
+      // Clear the stored email from localStorage
+      localStorage.removeItem("email");
+    </script>
+  </body>
+</html>

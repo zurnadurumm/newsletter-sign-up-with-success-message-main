@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--neutral-charcoal-grey);
+}
+
+:root {
+  --primary-tomato: hsl(4, 100%, 67%);
+  --neutral-slate-grey: hsl(234, 29%, 20%);
+  --neutral-charcoal-grey: hsl(235, 18%, 26%);
+}
+
+main {
+  background: white;
+  border-radius: 2.25rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 4rem;
+
+  max-width: 928px;
+}
+
+@media (max-width: 375px) {
+  main {
+    flex-direction: column-reverse;
+    border-radius: 0%;
+    gap: 1.5rem;
+    padding: 0;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 2.5rem;
+  padding-top: 4rem;
+}
+h1 {
+  color: var(--neutral-slate-grey);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.form-text {
+  color: var(--neutral-slate-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+ul {
+  list-style-image: url(assets/images/icon-list.svg);
+  padding-left: 1.5rem;
+}
+li {
+  color: var(--neutral-slate-grey);
+  line-height: 1.5;
+}
+
+@media (max-width: 375px) {
+  .container {
+    gap: 1.5rem;
+    overflow-wrap: break-word;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: var(--neutral-slate-grey);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+input {
+  border: 1px solid var(--neutral-slate-grey);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+input:placeholder-shown {
+  color: var(--neutral-slate-grey);
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+form button {
+  background: var(--neutral-slate-grey);
+  padding: 1rem 4.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 150%;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+form button:is(:hover, :focus) {
+  background: var(--primary-tomato);
+  box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+/* Success page styling */
+.subscription {
+  max-width: 504px;
+  background: white;
+  border-radius: 2.5rem;
+  padding: 3rem 4rem 4rem 4rem;
+  display: grid;
+  gap: 1.5rem;
+}
+.subscription h1 {
+  font-size: 3.5rem;
+  line-height: 100%;
+}
+.subscription button {
+  background: var(--neutral-slate-grey);
+  padding: 1rem 4.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 150%;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.subscription button:is(:hover, :focus) {
+  background: var(--primary-tomato);
+  box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.confirm-text {
+  font-weight: 400;
+  line-height: 150%;
+}
+.confirm-text .target-email {
+  font-weight: 700;
+  color: var(--neutral-charcoal-grey);
+}
+
+@media (max-width: 375px) {
+  body {
+    background: white;
+  }
+  .subscription {
+    border-radius: 0;
+    padding: 150px 1.5rem 2.5rem 1.5rem;
+  }
+  .subscription h1 {
+    font-size: 2.5rem;
+  }
+  .confirm-text {
+    margin-bottom: 16.5rem;
+  }
+}
